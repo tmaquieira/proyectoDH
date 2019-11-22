@@ -11,8 +11,7 @@
 </head>
   <body>
     <div class="contengoTodo">
-
-      <header><!--es el primer hijo de mi sitio, pq es lo primero q lee.  |<a href="registro.html"> REGISTRATE</a> <a href="clientProfile.html"> MI PERFIL</a>| <a href="home.html"> HOME</a>|     -->
+      <header>
         <div class="contenedorLogoMenu">
           <a href="home.html"><img id="logo" src="img/logo.png" alt="Juanita Jo - Logo"></a></div>
         <div class="contenedorMenu">
@@ -20,57 +19,121 @@
         </div>
       </header>
 
+<main class="centrameElLogin">
 
+	<section class="contieneLogin">
+    <h1>LOGIN</h1>
 
-<main class="centrameElRegistro">
-  <div class="contieneImgRegistro">
-    <img id="logo" src="img/imgloginjpg.jpg" alt="Juanita Jo - Login">
-  </div>
-	<section class="contieneRegistro">
-		<h1>LOGIN</h1>
-		<h2>¡Bienvenido!</h2>
+    <div class="contieneImgLogin">
+      <img src="img/imglogin.jpg" alt="Juanita Jo - Login">
+    </div>
+    <h2><a href="registro.html">¿No tenés cuenta? ¡Registrate!</a></h2>
+
 		<form class="formEncuesta" action="clientProfile.html" method="post">
 				<p><label for="email">E-mail</label>
-				<input type="email" name="email" value=""  placeholder="Ingresá tu e-mail" required=""></p> <!--REPASAR LOS VIDEOS DE TIPOS DE RELLENO, DESPLAZAMIENTO Y POR QUÈ SE LE PONE ID A LOS INPUT-->
+				<input class="inputEmail" type="email" name="email" value="" placeholder="tumail@mail.com" required> <!--REPASAR LOS VIDEOS DE TIPOS DE RELLENO, DESPLAZAMIENTO Y POR QUÈ SE LE PONE ID A LOS INPUT-->
+        <span style="font-size:1em;" class="errorEmail"></span></p>
 
 				<p><label for="pass">Contraseña</label>
-				<input type="password" name="pass" value="" placeholder="" required=" "></p>
-				<a href="home.html"><p>¿Olvidaste tu Contraseña?</p></a>
+				<input class="inputPass" type="password" name="pass" value="" placeholder="" required>
+        <span style="font-size:1em;" class="errorPassword"></span></p>
+
+      	<a href="home.html"><p>¿Olvidaste tu Contraseña?</p></a>
 				<p id="recordarmeCheck"><input type="checkbox" name="termsyconds" value="rememberme"> Recordarme </p>
-				<p><button class= "botonRegistrar" type="submit">Ingresar</button><!--BUTTON SIEMPRE SERÁ MI AMIGO PORQUE PUEDO ENCHUFARLE IMGs-->
-		</form>
 
-    <h2>¿No tenés una cuenta?<a href="registro.html"> ¡Registrate! </a></h2>
+  			<p><button class= "botonLoguear" type="submit">Ingresar</button><!--BUTTON SIEMPRE SERÁ MI AMIGO PORQUE PUEDO ENCHUFARLE IMGs-->
 
+  	</form>
 	</section>
   </main>
-<footer><!--etiqueta de bloque q ocupa el 100% del ancho-->
-  <div class="mapaDelSitio">
-    <h3>MAPA DEL SITIO</h3>
-    <ul>
-      <li><a href="home.html"> HOME</a></li>
-      <li><a href="faq.html"> FAQ</a></li>
-      <li><a href="registro.html"> REGISTRATE</a></li>
-      <li><a href="login.html"> LOGIN</a></li>
-      <li><a href="contact.html"> CONTACTO</a></li>
-      <li><a href="clientProfile.html"> MI PERFIL</a></li>
-    </ul>
-  </div>
-  <div class="infoFooter">
-    <p>Juanita Jo es una marca registrada, © 2019.</p>
-    <p><a href="https://juanitajo.com">https://juanitajo.com</a>
-    <p>Diseño y desarrollo por TUVI!</p>
-  </div>
-  <div class="enganchalo">
-    <h3>¡¡¡GRACIAS POR VISITARNOS!!!</h3>
-    <a href="clientProfile.html#suscribite"><p>¡Suscribite!</p></a>
-    <span>Seguinos también en...</span>
-    <a href="https://www.facebook.com/juanitajofan"><i class="fab fa-facebook"></i></a>
-    <a href="https://www.instagram.com/juanitajooficial"><i class="fab fa-instagram"></i></a>
-    <a href="https://twitter.com/juanitajook"><i class="fab fa-twitter"></i></a>
-    <a href="https://api.whatsapp.com/send?phone=541128862455"><i class="fab fa-whatsapp"></i></a>
-  </div>
-</footer>
-</div>
+  <footer><!--etiqueta de bloque q ocupa el 100% del ancho-->
+    <div class="mapaDelSitio">
+      <h3>MAPA DEL SITIO</h3>
+      <ul>
+        <li><a href="home.html"> HOME</a></li>
+        <li><a href="faq.html"> FAQ</a></li>
+        <li><a href="registro.html"> REGISTRATE</a></li>
+        <li><a href="login.html"> LOGIN</a></li>
+        <li><a href="contact.html"> CONTACTO</a></li>
+        <li><a href="clientProfile.html"> MI PERFIL</a></li>
+      </ul>
+    </div>
+    <div class="infoFooter">
+      <p>Juanita Jo es una marca registrada, © 2019.</p>
+      <p><a href="https://juanitajo.com">https://juanitajo.com</a>
+      <p>Diseño y desarrollo por TUVI!</p>
+    </div>
+    <div class="enganchalo">
+      <h3>¡¡¡GRACIAS POR VISITARNOS!!!</h3>
+      <p><a href="clientProfile.html#suscribite">¡Suscribite!</a></p>
+      <span>Seguinos también en...</span>
+      <a href="https://www.facebook.com/juanitajofan"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/juanitajooficial"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/juanitajook"><i class="fab fa-twitter"></i></a>
+      <a href="https://api.whatsapp.com/send?phone=541128862455"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer></div>
 
+<script>
+window.addEventListener('load',function(){
+    var botLoguear = document.querySelector("button.botonLoguear");
+    botLoguear.addEventListener('click',function(evento){
+
+        var posiblesErrores = false;
+        var email = document.querySelector("input.inputEmail");
+        var password = document.querySelector("input.inputPass");
+        var errorEmail = document.querySelector("span.errorEmail");
+        var errorPassword = document.querySelector("span.errorPassword");
+        var regexEmail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+        var regexPassword = /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/;
+        var rememberEmail;
+        var rememberPass;
+        //traté de usar createTextNode y append, pero no supe cómo eliminar mensajes de validación previos, por lo tanto se me acumulaban en el span.
+
+        if(regexEmail.test(email.value)){
+            errorEmail.innerHTML = "";
+            email.style.border = "1px solid grey";
+            errorEmail.style.color = "green";
+            posiblesErrores = false;
+            var rememberEmail = email.value;
+        } else if (email.value == ""){
+            evento.preventDefault();
+            errorEmail.innerHTML = "Tu email es <strong>obligatorio</strong>.";
+            email.style.border = "1px solid red";
+            errorEmail.style.color = "red";
+            posiblesErrores = true;
+        } else {
+            evento.preventDefault();
+            errorEmail.innerHTML = "Tu email <strong>no</strong> es válido.";
+            email.style.border = "1px solid red";
+            errorEmail.style.color = "red";
+            posiblesErrores = true;
+        }
+
+        if(regexPassword.test(password.value)){
+            errorPassword.innerHTML = "";
+            password.style.border = "1px solid grey";
+            errorPassword.style.color = "green";
+            posiblesErrores = false;
+            var rememberPass = password.value;
+        } else if(password.value == ""){
+            evento.preventDefault();
+            errorPassword.innerHTML = "Tu contraseña es <strong>obligatoria</strong>.";
+            password.style.border = "1px solid red";
+            errorPassword.style.color = "red";
+            posiblesErrores = true;
+        } //else {
+        //  evento.preventDefault();
+        //  errorPassword.innerHTML = "Tu contraseña no es válida."//Tu contraseña no cumple con los requisitos pre-establecidos (Tener entre 8 y 16 caracteres, al menos 1 número, 1 minúscula, 1 mayúscula y 1 caracter especial).
+        //  password.style.border = "1px solid red";
+        //  errorPassword.style.color = "red";
+        //  posiblesErrores = true;
+        //}
+        //if(!posiblesErrores){
+        //    console.log("Conectado. Bienvenido.");
+      //  }
+    });
+  })
+  </script>
 </body>
+</html>

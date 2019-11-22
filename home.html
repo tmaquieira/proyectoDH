@@ -27,17 +27,20 @@
       <img src="img/carrousel1.jpg" alt="Juanita Jo - Imágen Publicitaria">
     </div>
 
-    <h1>NUESTROS PRODUCTOS</h1>
-  <div class="selectProductos"> <!--despues del encabezado viene un div para las categorias-->
+
+
+  <main class="contenedorProductos">
+
+    <h1 class="h1Menu">PRODUCTOS</h1>
+    <div class="selectProductos"> <!--despues del encabezado viene un div para las categorias-->
     <select name="listaProductos" onchange="location = this.value;"> <!--para hacer el boton desplegable de categorias-->
       <option class="selectMainBold"value="">SELECCIONÁ UNA CATEGORÍA</option><!-- el primero siempre dice lo q el usuario tiene q hacer-->
       <option value="#mochilas">MOCHILAS</option>
       <option value="#carteras">CARTERAS</option>
       <option value="#billeteras">BILLETERAS</option>
     </select>
-  </div>
+    </div>
 
-  <main class="contenedorProductos">
       <section class= "previewDeProductos" id="mochilas"> <!-- creo un nuevo padre que contenga a todos los productos-->
         <h2 class="h2MENU">Mochilas</h2>
         <article class="previewUnProducto"> <!-- cada producto va a ser un articulo-->
@@ -124,7 +127,7 @@
   </div>
   <div class="enganchalo">
     <h3>¡¡¡GRACIAS POR VISITARNOS!!!</h3>
-    <a href="clientProfile.html#suscribite"><p>¡Suscribite!</p></a>
+    <p><a href="clientProfile.html#suscribite">¡Suscribite!</a></p>
     <span>Seguinos también en...</span>
     <a href="https://www.facebook.com/juanitajofan"><i class="fab fa-facebook"></i></a>
     <a href="https://www.instagram.com/juanitajooficial"><i class="fab fa-instagram"></i></a>

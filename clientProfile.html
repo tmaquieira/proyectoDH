@@ -23,16 +23,36 @@
         </div>
       </header>
 
-<main class="MainclientProfile"align="center">
+<main class="mainClientProfile"align="center">
 	<section class="contieneRegistro">
 
 <h1 align="center">PERFIL DE CLIENTE</h1>
 
-<h2 class="h2Client">¡Hola, Fulano!</h2>
-<p  class="linksProfile">TU ÚLTIMO INGRESO: XX/XX/XXXX</p>
-<a  class="linksProfile" href="#"><p>TU HISTORIAL DE COMPRAS >></p></a>
+<h2 class="h2Client">¡Hola, XXXX!</h2>
+<p  class="linksProfile">ÚLTIMO INGRESO: XX/XX/XXXX</p>
+<a  class="linksProfile" href="#"><p>HISTORIAL DE COMPRAS >></p></a>
 
-<i>Artículos que quizá te interesen...</i>
+
+<h3 class="linksProfile">CONFIGURACIÓN</h3>
+<ul><li><a  class="linksProfile" href="#">Tus Datos Personales</a></li>
+  <li><a  class="linksProfile" href="#">Tus Medios de Pago</a></li></ul>
+
+<form action="#" method="post">
+
+  <p><label for="suscripcion" id="suscribite"> ¿Querés suscribite a nuestro newsletter? (Podés desuscribirte cuando quieras)</label></p>
+  <p><input type="checkbox" name="sus" value="suscribime"> Dale!
+
+  <p><label for="tipoDeSuscripcion">Me interesaría recibir info de...</label></p>
+  <p><input type="radio" name="gustos" value="suscarte"> Carteras
+  <input type="radio" name="gustos" value="susmochi"> Mochilas
+  <input type="radio" name="gustos" value="susbille"> Billeteras
+  <input type="radio" name="gustos" value="sustodo"> Todo </p>
+
+  <p><button class="botonRegistrar" type="submit" name="guardar" value="enviar"> Guardar </button> <button class="botonRegistrar" type="reset" name="borrar" value="borrar"> Vaciar </button></p>
+
+</form>
+
+<i>Productos que quizá te interesen:</i>
 <section class= "previewDeProductos"> <!-- creo un nuevo padre que contenga a todos los productos-->
   <article class="previewUnProducto"> <!-- cada producto va a ser un articulo-->
     <img class="imgPreviewProducto"src="img/mochila1a.jpg" alt="producto"><!--cada art va a tener dentro una imagen del producto, el precio y el boton de comprar-->
@@ -54,24 +74,7 @@
   </article>
     </section>
 
-    <h3 class="linksProfile">TU CONFIGURACIÓN</h3>
-    <ul><li><a  class="linksProfile" href="#">Tus Datos Personales</a></li><li><a  class="linksProfile" href="#">Tus Medios de Pago</a></li></ul>
 
-		<form action="home.html" method="post">
-
-      <p><label for="suscripcion"> ¿Querés suscribite a nuestro newsletter? (Podés desuscribirte cuando quieras)</label></p>
-      <p><input type="checkbox" name="sus" value="suscribime"> Dale!
-
-      <p><label for="tipoDeSuscripcion">Me interesaría recibir info de...</label></p>
-      <p><input type="radio" name="gustos" value="suscarte"> Carteras
-      <input type="radio" name="gustos" value="susmochi"> Mochilas
-      <input type="radio" name="gustos" value="susbille"> Billeteras
-      <input type="radio" name="gustos" value="sustodo"> Todo </p>
-
-			<p><button class="botonRegistrar" type="submit" name="guardar" value="enviar"> Guardar </button> <button class="botonRegistrar" type="reset" name="borrar" value="borrar"> Vaciar </button></p>
-		</form>
-
-		<a class="linksProfile" href="home.html">CERRAR SESIÓN</a>
 	</section>
 
 </main>
@@ -95,7 +98,7 @@
   </div>
   <div class="enganchalo">
     <h3>¡¡¡GRACIAS POR VISITARNOS!!!</h3>
-    <a href="clientProfile.html#suscribite"><p>¡Suscribite!</p></a>
+    <p><a href="clientProfile.html#suscribite">¡Suscribite!</a></p>
     <span>Seguinos también en...</span>
 		<a href="https://www.facebook.com/juanitajofan"><i class="fab fa-facebook"></i></a>
 		<a href="https://www.instagram.com/juanitajooficial"><i class="fab fa-instagram"></i></a>

@@ -4,29 +4,32 @@ body { /*por default, para q no quede todo pegado a los bordes, css me da un mar
   font-family: Oswald;
   /*font-weight: bold;*/
   background-color: white;
+  color: black;
 }
 
 div.contengoTodo{
   background-image: url(../img/fondito.jpg);
   background-repeat: repeat;
+    padding: 1%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 header {/*lo primero de la estructura es un header. por ser un div de bloque, midel el 100% del ancho x lo tanto no hace falta decirle cuanto tiene q ocupar  */
-/*  border: black 2px solid;
-overflow: hidden;*/
+overflow: hidden;
   text-align: justify;
-  background-color:white;
-  padding: 10px;
+  background-color: white;
+  padding: 1%;
   margin: 0 auto;
 }
 
 .carritoMenu{
-  width: 20px; /*fijarme si lo puedo pasar a %*/
-  background-image: url(../img/carrito.png);
+  width: 20px; fijarme si lo puedo pasar a %
+/*  background-image: url(../img/carrito.png);*/
 }
-.carritoMenu:hover{
+/*.carritoMenu:hover{
   background-image: url(../img/carritoB.png);
-}
+}*/
 .contenedorLogin{
   margin: 0 auto;
   text-align: right;
@@ -40,24 +43,26 @@ box-sizing: border-box;
   text-align: center;
 }
 
+
+
 .contenedorMenu{
   margin: 0 auto;
   text-align: center;
 }
-header img #logo {/* el header, q adentro tiene una img con id logo*/
+/*ader img #logo { el header, q adentro tiene una img con id logo
   width: 20%;
   margin-left: 10px;
-}
+}*/
 
 header nav{ /*el header q adentro tiene un nav (q por default es display block).. la etiqueta img es de linea pero el nav es de bloque (y necesita ocupar el 100% de su padre).*/
   display: inline-block;
 /*  float:right;  la img ya la tengo a la izq pero quiero el menu a la derecha*/
-  margin-top: 30px; /* para posicionarlo mas abajo en el header*/
-  margin-right: 10px;
+  margin-top: 2%; /* para posicionarlo mas abajo en el header*/
 }
 
 header nav a{ /* el header q tiene un nav y dentro links*/
-  margin-right: 15px; /* para generar espacio entre cada link. uso margin rigth pq aprovecho y separo al ultimo de lavegador*/
+  margin-right: 5px;
+    margin-left: 5px; /* para generar espacio entre cada link. uso margin rigth pq aprovecho y separo al ultimo de lavegador*/
   font-size: 18px;
 }
 
@@ -65,57 +70,85 @@ header nav a:hover{
   color: violet;
 }
 
+main{
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background-color: white;
+}
+
 main.centrameElRegistro {
-  text-align: center;
+  text-align: left;
   overflow: hidden;
-  background-color:white;
   margin-top: 30px;
 }
 main.centrameElContacto {
   text-align: left;
   overflow: hidden;
-  background-color:white;
   margin-top: 30px;
 }
-.contieneImgRegistro{
+main.centrameElLogin {
+  text-align: center;
+  overflow: hidden;
+  margin-top: 30px;
+}
+.contieneImgRegistro, .contieneImgLogin{
   float: left;
 }
 .contieneImgRegistro img{
+  width: 80%;
+  margin: 2%;
+}
+.contieneImgLogin img{
   width: 95%;
   margin: 2%;
 }
-.contieneRegistro{
-background-color: white
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 20px;
+.contieneRegistro, .contieneContacto, .contieneLogin{
+  margin-top: 1%;
+  margin-bottom: 1%;
+  padding: 1%;
 }
 
-.contieneContacto{
-/*  border: 2px solid black;*/
-  margin: 20px;
-  padding: 20px;
+h1 {
+  font-size: 2em;
+  font-family: 'Oswald', cursive;
+  text-align: center;
+  border-bottom: grey 1px solid;
+  margin: 1%;
 }
 
+.h1Menu {
+  background-color: white;
+  margin: 0 auto;
+}
+
+h2{
+  font-size: 1.3em;
+  font-family: 'Oswald', cursive;
+}
  .h2FAQ{
    padding-left: 10px;
-   font-size: 1.5em;
    border-bottom: grey 1px solid;
    text-transform: uppercase;
 
+ }
+ .h2MENU{
+  border-bottom: grey 1px solid;
+   padding-left: 10px;
+   text-transform: uppercase;
+ }
+ .h2Client{
+ text-align: center;
+ }
+
+ section.previewDeProductos h2{
+ text-transform: uppercase;
  }
 
  .answerFAQp{
    font-size: 1.25em;
  }
 
- .h2MENU{
-  /* background-color: white;*/
-  border-bottom: grey 1px solid;
-   font-size: 2em;
-   padding-left: 10px;
-   text-transform: uppercase;
- }
+
 
 .coloresProducto{
 overflow: hidden;
@@ -126,16 +159,12 @@ overflow: hidden;
   margin: 2px;
 }
 
- h2.h2Client{
-font-size: 2em;
-text-align: center;
-background-color: white;
-}
+
 
 h3{
   font-size: 1.25em;
 }
-.MainclientProfile{
+.mainClientProfile{
   margin-bottom: 20px;
 }
 
@@ -165,15 +194,7 @@ li {
   transition: 2s;
  }
 
-div.contengoTodo {
-/*  width: 60%;
-  height: 50%;
-  border: black 2px solid;*/
-  padding: 10px;
-  margin: 10px;
-  box-sizing: border-box;
-  overflow: hidden;
-}
+
 
 
 a:hover{
@@ -184,21 +205,15 @@ a:hover{
 div.selectProductos select {
   width: 100%;
   height: 60px;
-  background-color: white;
-  font-size: 1.75em;
+  /*background-color: white;*/
   font-family: Oswald;
-/*  border: black 2px solid;*/
   border-top: 0px;
   font-weight: bold;
   padding-left: 10px;
   text-transform: uppercase;
   margin-top: 2px;
 }
-div.selectProductos select option{
-  font-size: 1em;
-  font-family: Oswald;
-/*  font-weight: bold;*/
-}
+
 select:focus{
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
   -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
@@ -218,80 +233,93 @@ div.carrousel img:hover{ /*por ser un div, el carrousel ya ocupa el 100% del anc
 
 main.contenedorProductos {
   overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 section.previewDeProductos {
   overflow: hidden;
 }
-section.previewDeProductos h2{
-text-transform: uppercase;
-}
 
-@media only screen (max-device-width: 460px) {
-  section {
-    overflow: hidden;
+
+@media screen and (max-width: 480px){ /*PARA CELULAR*/
+  .contenedorLogoMenu img{
+    width: 98%;
   }
-article{
-width: 70%;
-float: left;
 
+  #domicilio{
+    width: 90%;
+  }
+  div.selectProductos select{
+    font-size: 1.25em;
+    }
+  div.selectProductos select option{
+    font-size: 1em;
+  }
+  article.previewUnProducto, img.imgPreviewProducto {
+    width: 46%;
+  }
+  textarea#escribinos {
+  width: 90%;
 }
-textarea {
-  width: 80%;
 }
+
+
+@media screen and (min-width: 481px){/*PARA WEB... NO SOBREESCRIBIR PROPIEDADES DENTRO Y FUERA DE MEDIAQ EN EL CSS!*/
+  article.previewUnProducto {
+    width: 29%;
+  }
+  #domicilio{
+    width: 25%;
+  }
+  div.selectProductos select{
+    font-size: 1.5em;
+    }
+  div.selectProductos select option{
+    font-size: 1em;
+  }
 }
 
 article.previewUnProducto {
-  display: inline-block; /*para q me deje ponerlos uno al lado del otro sin q dejen de ser bloques*/
-  width: 28%;
-  background-color: white;
-
-  margin-left: 2.5%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 10px;
-
-/*  border: 2px solid black;*/
+  display: inline-block; /*para q me deje ponerlos uno al lado del otro sin q dejen de ser bloques
+  background-color: white;*/
   float: left;
+  margin: 1%;
+  padding: 1%;
+  background-color: white;
 }
 
-article.previewUnProducto img.imgPreviewProducto{
-/*  border: black 4px dashed;*/
+img.imgPreviewProducto{
   width: 98%;
   float: left;
 }
 
 article.previewUnProducto h2{
   float: left;
-  font-size: 2em;
-  /*margin-top: 8px;*/
+  font-size: 1.2em;
 }
 
 article.previewUnProducto p.price {
-  font-size: 1.5em;
-  /*margin-bottom: 0px;*/
+  font-size: 1em;
   display: inline-block;
   float: left;
 }
-
 
 article.previewUnProducto a.verMas{
   display: inline-block;
   float: right;
   right: 10px;
   padding: 5px;
-  background-color: white;
+  background-color: violet;
   border-radius: 5px;
   font-family: 'Oswald', cursive;
   font-size: 1em;
   font-size: 1.5em;
   text-align: center;
-  color: black;
   text-decoration: none;
   }
 
 article.previewUnProducto a.verMas:hover{
-    background-color: violet;
+    background-color: purple;
     cursor: pointer;
 }
 
@@ -311,7 +339,6 @@ article.previewUnProducto p{
       margin-bottom: 20px;
       margin-left: 2.5%;
       margin-right: 2.5%;
-    /*  border: 2px solid black;*/
       overflow: hidden;
       padding: 10px;
       box-sizing: border-box;
@@ -325,8 +352,7 @@ article.previewUnProducto p{
       float: right;
       margin-left: 15px;
       text-decoration: none;
-      color: black;
-      background-color: white;
+      background-color: violet;
       height: 22px;
       width: 120px;
       text-align: center;
@@ -339,23 +365,8 @@ article.previewUnProducto p{
       }
 
 
-h1{
-  font-size: 2em;
-  color:black;
-  font-family: 'Oswald', cursive;
-  text-align: center;
-  border-bottom: grey 1px solid;
 
-}
 
-h1.h1describimeProducto{
-text-align:center}
-
-h2{
-  font-size: 1.5em;
-  font-family: 'Oswald', cursive;
-  /*text-transform: capitalize;*/
-}
 .describimeProducto{
   overflow: hidden;
   margin-bottom: 25px;
@@ -366,7 +377,6 @@ h2{
 
 .imgDelProducto{
   float: left;
-/*  border-left: black 6px solid;*/
 }
 
 
@@ -395,7 +405,6 @@ h2{
 }
 
 .texDelProducto h2{
-  font-size: 1.75em;
   margin-block-start: 0px;
   padding-left: 10px;
   border-bottom: grey 1px solid;
@@ -408,25 +417,22 @@ position: absolute;
   bottom: 10px;
   right: 50px;*/
   font-size: 35px;
-  background-color: white;
+  background-color: violet;
   border-radius: 10px;
   padding:6px;
   font-family: 'Oswald', cursive;
   border: 0px solid transparent;
   margin-top: 20px;
   }
-/*  #iconoLaQuiero{
-      width: 40px;
-      height: 40px;
-    }*/
+
 
     button:hover{
-      background-color: white;
+      background-color: purple;
     }
 
-.botonRegistrar{
+.botonRegistrar, .botonLoguear{
   font-size: 1.5em;
-  background-color: white;
+  background-color: violet;
   border-radius: 10px;
   padding:10px;
   font-family: 'Oswald', cursive;
@@ -444,7 +450,6 @@ position: absolute;
 .imgDelCarrito{
   float: left;
   width: 50%;
-  /*border: black 3px dotted;*/
 }
 
 .texDelCarrito{
@@ -460,15 +465,13 @@ position: absolute;
   font-size: 1em;
 }
 
-.texDelCarrito h2{
-  font-size: 1.5em;
-}
+
 
 button.laCompro{
   float: right;
   position: relative;
   font-size: 1.75em;
-  background-color: white;
+  background-color: violet;
   border-radius: 8px;
   padding:5px;
   font-family: 'Oswald', cursive;
@@ -476,7 +479,7 @@ button.laCompro{
 }
 
 button.laCompro:hover{
-background-color: white;
+background-color: purple;
 }
 
 
@@ -488,11 +491,6 @@ a {
 text-decoration: none;
 color: black;
 }
-/*
-#icono{
-    width: 20px;
-    height: 20px;
-  }*/
 
 textarea {
   width: 50%;
@@ -507,9 +505,7 @@ footer {
     text-align: center;
     margin-top: 30px;
 background-color: rgba(255, 255, 255, 0.5);
-    /*
-    background-color: black;
-    border: black 2px solid;*/
+border-top: grey 1px solid;
   }
 
 footer div.mapaDelSitio {
@@ -543,10 +539,8 @@ footer h3{
     font-size: 1em;
   }
   footer p{
-      color:black;
     }
 footer a, .contieneRegistro a, a.linksProfile{
-    color: black;
   }
 .contieneRegistro a:hover, a.linksProfile:hover{
   color: violet;
@@ -555,8 +549,4 @@ footer a, .contieneRegistro a, a.linksProfile{
 footer a:hover {
     color: violet;
   }
-
-
   }
-
-  /*text-transform: uppercase;*/
