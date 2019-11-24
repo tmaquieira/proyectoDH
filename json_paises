@@ -1,0 +1,46 @@
+1)EN EL FORM AGREGAR:
+
+Nacionalidad: 
+<select name="" id="paises ">
+    <option value="">Selecciona un pais</option>
+</select>
+<span style="color: red; font-size:10px" class="errorPaises"></span>
+-----------------------------------------------------
+2)AL FINAL DEL... 
+window.addEventListener ('load',function(){
+
+Y DESPUES DE HABER CERRADO LA VALIDACION...
+
+fetch("http://country.io/names.json")
+
+.then(function(respuesta)){
+return respuesta.json();
+})
+
+.then(function(datosPaises)){
+var opcionesDePaises = document.querySelector("#paises");
+for (var i=0; i< datosPaises.length; i++)
+// console.log (datosPaises[i]); (RENGLON COMENTADO)
+opcionesDePaises.innerHTML= opcionesDePaises.innerHTML + "<option value="+datosPaises[i]+ ">"+datosPaises[i]+"</option>"
+})
+
+.catch(function(error){
+console.log(error);
+});
+------------------------------------------------------
+3) EN LOS SPAN DE ERRORES AGREGAR...
+
+var paises= document.querySelector("#paises");
+var errorPaises = document.querySelector("span.errorPaises");
+
+
+4)EN LAS VALIDACIONES AGREGAR...
+
+if (paises.value ==""){
+errorPaises.innerHTML= "el pais es obligatorio";
+paises.style.border = "1px solid red";
+} else {
+errorPaises.innerHTML= "";
+paises.style.border = "1px solid green";
+}
+
