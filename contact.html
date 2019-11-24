@@ -25,7 +25,7 @@
 
 			<main class="centrameElContacto">
 				<h1>CONTACTO</h1>
-
+				<form class="" action="index.html" method="post">
 				<section class= "contieneContacto"> <!-- creo un nuevo padre que contenga a todos los productos-->
 						<form action="home.html" method="post">
 						<h2 class="h2Contact"><label for="comentarios" id="escribinos">ESCRIBINOS</label></h2>
@@ -33,12 +33,13 @@
 						<p><button class="botonRegistrar" type="submit" name="button" value="enviar"> Enviar </button> <button class="botonRegistrar" type="reset" name="borrar" value="borrar"> Vaciar </button></p>
 					</form>
 					<h2 class="h2Contact" id="sucursales">SUCURSALES</h2>
+					<div class="contenedorMapaYSelect">
 					<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d209925.9280152556!2d-58.51175778471518!3d-34.70284363702784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sjuanita%20jo%20sucursal!5e0!3m2!1ses!2sar!4v1571522214422!5m2!1ses!2sar" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-
 					<select name="listaProductos" onchange="location = this.value;">
-						<option class="selectMainBold"value="">SELECCIONÁ UNA SUCURSAL</option>
+						<option class="" value="">SELECCIONÁ UNA SUCURSAL</option>
 						<option value="#1">ALTO PALERMO</option>
 					</select>
+				</div>
 
 					<h2 id="1">JUANITA JO | ALTO PALERMO</h2>
 					<p>Lúnes a Sábado de 9 a 21 hs., Domingo de 11 a 20 hs.</p>
@@ -281,6 +282,12 @@ JSON de SUCURSALES:
 
 		 				capturameProvincia.innerHTML = capturameProvincia.innerHTML + "<option>"+data.provincias[i].nombre+" - ID:"+data.provincias[i].id+"</option>";
 		 }
+		 capturameProvincia.style.fontSize = "2em";
+		 capturameProvincia.style.fontFamily = "Oswald";
+		 capturameProvincia.style.textTransform = "uppercase";
+		 capturameProvincia.style.width = "100%";
+
+
 		 })
 		 .catch(function(error){
 		  console.log(error);

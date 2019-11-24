@@ -406,7 +406,7 @@ a:hover{
   color:violet;
 }
 
-div.selectProductos select {
+div.selectProductos select, select.contieneContacto {
   width: 100%;
   height: 60px;
   /*background-color: white;*/
