@@ -18,93 +18,170 @@
       </div>
       <div class="contenedorLogoMenu">
         <a href="home.html"><img id="logo" src="img/logo.png" alt="Juanita Jo - Logo"></a></div>
-      <div class="contenedorMenu">
-      <nav><a href="home.html">HOME</a><a href="faq.html">FAQ</a><a href="contact.html">CONTACTO</a><a class="carritoMenu" href="shoppingCart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></nav>
+        <div class="contenedorMenu">
+          <nav><a href="home.html">HOME</a><a href="faq.html">FAQ</a><a href="contact.html">CONTACTO</a><a class="carritoMenu" href="shoppingCart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></nav>
+        </div>
+      </header>
+
+
+
+
+      <div class="selectProductos"> <!--despues del encabezado viene un div para las categorias-->
+        <select name="listaProductos" onchange="location = this.value;"> <!--para hacer el boton desplegable de categorias-->
+          <option value="">Seleccioná una Categoría</option><!-- el primero siempre dice lo q el usuario tiene q hacer-->
+          <option value="home.html#mochilas">MOCHILAS</option>
+          <option value="home.html#carteras">CARTERAS</option>
+          <option value="home.html#billeteras">BILLETERAS</option>
+        </select>
       </div>
-    </header>
 
+      <main class="contenedorProductos">
+        <h1>DETALLE DE PRODUCTO</h1>
+        <div class="describimeProducto"> <!-- cada producto va a ser un articulo-->
+          <img class="imgDelProducto" src="img/cartera1b.jpg" alt="carterita loca" width="45%"> <!--cada art va a tener dentro una imagen del producto, el precio y el boton de comprar-->
+          <div class="texDelProducto">
+            <h2>Cartera Tuvi</h2>
+            <p>INNOVACIÓN: material cristal. Cartera innovadora, con impresión en el frente. Herrajes nuevos con forma de corazón y neceser que puede ser utilizado, en si mismo, como otra cartera del tipo sobre. Las dos manijas cortas son rígidas y la correa larga es extraíble. Combina material efecto cuero y tela impresa exclusiva de la marca. Tiene varios bolsillo internos, con y sin cierre. Posee las chapas de Juanita Jo (redonda y rectangular), forro y herrajes personalizados de la marca. Está confeccionada con material alternativo al cuero animal. Las medidas aproximadas son: 39 cm por 42 cm</p>
+            <span>$ 5.500 ARS</span>
 
+            <form action="shoppingCart.html" method="post">
 
+              <p><label for="color">COLOR</label>
+                <div class="coloresProducto">
+                  <li><img class="colorcito" src="img/colorB.jpg" alt="Color Blanco" title="Blanco"></li>
+                  <li><img class="colorcito" src="img/colorC.jpg" alt="Color Celeste" title="Celeste"></li>
+                  <li><img class="colorcito" src="img/colorN.jpg" alt="Color Negro" title="Negro"></li>
+                  <li><img class="colorcito" src="img/colorR.jpg" alt="Color Rosa" title="Rosa"></li>
 
-        <div class="selectProductos"> <!--despues del encabezado viene un div para las categorias-->
-                <select name="listaProductos" onchange="location = this.value;"> <!--para hacer el boton desplegable de categorias-->
-                  <option value="">Seleccioná una Categoría</option><!-- el primero siempre dice lo q el usuario tiene q hacer-->
-                  <option value="home.html#mochilas">MOCHILAS</option>
-                  <option value="home.html#carteras">CARTERAS</option>
-                  <option value="home.html#billeteras">BILLETERAS</option>
-                </select>
+                  <select class="colorcito" name="color" id="colorCompra" required>
+                    <option value=""> Seleccioná uno</option>
+                    <option value="bla"> Blanco</option>
+                    <option value="cel"> Celeste</option>
+                    <option value="neg"> Negro</option>
+                    <option value="ros"> Rosa</option>
+                  </select></div></p>
+
+                  <p><label for="cantidad">CANTIDAD</label></p>
+                  <p><select name="cantidad" id="cantidadCompra" required>
+                    <option value=""> Seleccioná una</option>
+                    <option value="1"> 1</option>
+                    <option value="2"> 2</option>
+                    <option value="3"> 3</option>
+                  </select></p>
+
+                  <p><button class="laQuiero" type="submit" name="quiero" value="enviar"> Comprar </button></p>
+                </form>
+
               </div>
+            </div>
 
-<main class="contenedorProductos">
-<h1>DETALLE DE PRODUCTO</h1>
-<div class="describimeProducto"> <!-- cada producto va a ser un articulo-->
-  <img class="imgDelProducto" src="img/cartera1b.jpg" alt="carterita loca" width="45%"> <!--cada art va a tener dentro una imagen del producto, el precio y el boton de comprar-->
-  <div class="texDelProducto">
-  <h2>Cartera Tuvi</h2>
-  <p>INNOVACIÓN: material cristal. Cartera innovadora, con impresión en el frente. Herrajes nuevos con forma de corazón y neceser que puede ser utilizado, en si mismo, como otra cartera del tipo sobre. Las dos manijas cortas son rígidas y la correa larga es extraíble. Combina material efecto cuero y tela impresa exclusiva de la marca. Tiene varios bolsillo internos, con y sin cierre. Posee las chapas de Juanita Jo (redonda y rectangular), forro y herrajes personalizados de la marca. Está confeccionada con material alternativo al cuero animal. Las medidas aproximadas son: 39 cm por 42 cm</p>
-<span>$ 5.500 ARS</span>
-
-<form action="shoppingCart.html" method="post">
-
-  <p><label for="color">COLOR</label>
-    <div class="coloresProducto">
-    <li><img class="colorcito" src="img/colorB.jpg" alt="Color Blanco" title="Blanco"></li>
-    <li><img class="colorcito" src="img/colorC.jpg" alt="Color Celeste" title="Celeste"></li>
-    <li><img class="colorcito" src="img/colorN.jpg" alt="Color Negro" title="Negro"></li>
-    <li><img class="colorcito" src="img/colorR.jpg" alt="Color Rosa" title="Rosa"></li>
-
-    <select class="colorcito" name="color" id="colorCompra" required>
-      <option value=""> Seleccioná uno</option>
-      <option value="bla"> Blanco</option>
-      <option value="cel"> Celeste</option>
-      <option value="neg"> Negro</option>
-      <option value="ros"> Rosa</option>
-    </select></div></p>
-
-    <p><label for="cantidad">CANTIDAD</label></p>
-      <p><select name="cantidad" id="cantidadCompra" required>
-        <option value=""> Seleccioná una</option>
-        <option value="1"> 1</option>
-        <option value="2"> 2</option>
-        <option value="3"> 3</option>
-      </select></p>
-
-  <p><button class="laQuiero" type="submit" name="quiero" value="enviar"> La Quiero</button></p>
-</form>
-
-</div>
-</div>
-
-</main>
+          </main>
 
 
-<footer><!--etiqueta de bloque q ocupa el 100% del ancho-->
-  <div class="mapaDelSitio">
-    <h3>MAPA DEL SITIO</h3>
-    <ul>
-      <li><a href="home.html"> HOME</a></li>
-      <li><a href="faq.html"> FAQ</a></li>
-      <li><a href="registro.html"> REGISTRATE</a></li>
-      <li><a href="login.html"> LOGIN</a></li>
-      <li><a href="contact.html"> CONTACTO</a></li>
-      <li><a href="clientProfile.html"> MI PERFIL</a></li>
-    </ul>
-  </div>
-  <div class="infoFooter">
-    <p>Juanita Jo es una marca registrada, © 2019.</p>
-    <p><a href="https://juanitajo.com">https://juanitajo.com</a>
-    <p>Diseño y desarrollo por TUVI!</p>
-  </div>
-  <div class="enganchalo">
-    <h3>¡¡¡GRACIAS POR VISITARNOS!!!</h3>
-    <p><a href="clientProfile.html#suscribite">¡Suscribite!</a></p>
-    <span>Seguinos también en...</span>
-    <a href="https://www.facebook.com/juanitajofan"><i class="fab fa-facebook"></i></a>
-    <a href="https://www.instagram.com/juanitajooficial"><i class="fab fa-instagram"></i></a>
-    <a href="https://twitter.com/juanitajook"><i class="fab fa-twitter"></i></a>
-    <a href="https://api.whatsapp.com/send?phone=541128862455"><i class="fab fa-whatsapp"></i></a>
-  </div>
-</footer>
+          <footer><!--etiqueta de bloque q ocupa el 100% del ancho-->
+    <div class="footerIconitosBellos">
+      <div class="footercontengoIconitosBellos">
+    <div class="contengoIconitoFooter">
+      <img src="img/footer1.jpg" alt="Envío a domicilio a todo el país">
+      <p class="pIconitos"><span>ENVÍOS A TODO EL PAÍS</span></p>
     </div>
-  </body>
-</html>
+    <div class="contengoIconitoFooter">
+      <img src="img/footer2.jpg" alt="Encontrá todas nuestras tiendas">
+      <p class="pIconitos"><span><a href="contact.html#sucursales">ENCONTRÁ NUESTRAS TIENDAS</a></span></p>
+    </div>
+    <div class="contengoIconitoFooter">
+      <img src="img/footer3.jpg" alt="Formá parte de Juanita Jo">
+      <p class="pIconitos"><span>FORMÁ PARTE DE JUANITA JO</span></p>
+    </div>
+    <div class="contengoIconitoFooter">
+      <img src="img/footer4.jpg" alt="Contacto Mayoristas">
+      <p class="pIconitos"><span>CONTACTO PARA MAYORISTAS</span></p>
+    </div>
+    </div>
+      </div>
+
+    <div class="contengoTodoLoDemásDelFooter">
+
+            <div class="footerSeguinos">
+              <div class="contengoFooterSeguinos">
+
+              <h3>GRACIAS POR VISITARNOS</h3>
+              <h4>REDES SOCIALES</h4>
+              <nav><a href="https://www.facebook.com/juanitajofan"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.instagram.com/juanitajooficial"><i class="fab fa-instagram"></i></a>
+              <a href="https://twitter.com/juanitajook"><i class="fab fa-twitter"></i></a>
+              <a href="https://api.whatsapp.com/send?phone=541128862455"><i class="fab fa-whatsapp"></i></a></nav>
+              <a href="clientProfile.html#suscribite">Suscribite a nuestro Newsletter</a>
+              <form class="suscribiteMini" action="clientProfile.html#suscribite" method="post">
+                <input class="inputEmailSus" type="email" name="email" value="" placeholder="tumail@mail.com" required>
+                <button class= "botonSuscribir" type="submit">Enviar</button></p>
+                <p class="pSuscribir"><span class="errorEmailSus"></span></p>
+              </form>
+            </div>
+
+            </div>
+
+
+            <div class="footerMapaDelSitio">
+              <div class="contengoFooterMapaDelSitio">
+
+              <ul><h3>MAPA DEL SITIO</h3>
+                <li><a href="home.html"> HOME</a></li>
+                <li><a href="faq.html"> FAQ</a></li>
+                <li><a href="registro.html"> REGISTRATE</a></li>
+                <li><a href="login.html"> LOGIN</a></li>
+                <li><a href="contact.html"> CONTACTO</a></li>
+                <li><a href="clientProfile.html"> MI PERFIL</a></li>
+              </ul>
+            </div>
+          </div>
+
+            <div class="footerInfo">
+              <div class="contengoFooterInfo">
+              <p>Juanita Jo es una marca registrada, © 2019.</p>
+              <p><a href="https://juanitajo.com">https://juanitajo.com</a>
+                <p>Diseño y desarrollo por TUVI!</p>
+              </div>
+                </div>
+
+
+            </footer>
+          </div>
+        </div>
+
+          <script>
+          window.addEventListener("load", function(){
+          
+          var botSuscribir = document.querySelector("button.botonSuscribir");
+
+            botSuscribir.addEventListener('click',function(evento){
+              var email = document.querySelector("input.inputEmailSus");
+              var errorEmail = document.querySelector("span.errorEmailSus");
+              var regexEmail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+
+              if(regexEmail.test(email.value)){
+                errorEmail.innerHTML = "";
+                email.style.border = "1px solid grey";
+                errorEmail.style.color = "green";
+                posiblesErrores = false;
+                if (checkBoxR.checked == true){
+                  var rememberEmail = email.value;
+                }
+              } else if (email.value == ""){
+                evento.preventDefault();
+                errorEmail.innerHTML = "Tu email es <strong>obligatorio</strong>.";
+                email.style.border = "1px solid red";
+                errorEmail.style.color = "red";
+                posiblesErrores = true;
+              } else {
+                evento.preventDefault();
+                errorEmail.innerHTML = "Tu email <strong>no</strong> es válido.";
+                email.style.border = "1px solid red";
+                errorEmail.style.color = "red";
+                posiblesErrores = true;
+              }
+            });
+          });
+          </script>
+        </body>
+        </html>
